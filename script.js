@@ -12,6 +12,8 @@ $setTime.addEventListener('input', setGameTime)
 isGameStarted = false
 score = 0;
 
+/* Main function */
+
 function startTheGame(){
 
     score = 0
@@ -37,6 +39,8 @@ function startTheGame(){
     generationCube()
 }
 
+/* Generation cubes */
+
 function generationCube() {
 
     $areaForCube.innerHTML = ""
@@ -58,7 +62,7 @@ function generationCube() {
 
 }
 
-/* CHECK ELEMENT */
+/* Check element */
 
 function checkDataBox (event) {
 
@@ -69,7 +73,7 @@ function checkDataBox (event) {
     }
 }
 
-/* MATH RANDOM */
+/* Math random */
 
 function random(min, max) {
     return Math.floor(Math.random() * (max - min) + min)
@@ -80,9 +84,7 @@ function setGameScore() {
     $result.textContent = score
 }
 
-/* TIME */ 
-
-
+/* Time */ 
 
 
 function endGame() {
@@ -97,6 +99,8 @@ function endGame() {
     
 }
 
+/* Set game time */
+
 function setGameTime() {
     var setTime = parseInt($setTime.value)
     $timeScore.textContent = setTime.toFixed(1)
@@ -108,6 +112,8 @@ function setGameTime() {
     }
 }
 
+
+/* Make mistake */
 
 function error (message) {
     alert(message)
