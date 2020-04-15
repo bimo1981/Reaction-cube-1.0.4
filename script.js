@@ -1,3 +1,5 @@
+/* initialization main */
+
 var $startButton = document.querySelector("#start-button")
 var $gamePage = document.querySelector("#game-page")
 var $result = document.querySelector("#result-counter-result")
@@ -5,12 +7,14 @@ var $timeScore = document.querySelector("#time-score")
 var $areaForCube = document.querySelector("#area-for-cube")
 var $setTime = document.querySelector("#set-time-input")
 
+/* initialization other */
+isGameStarted = false
+score = 0;
+
+/* Add events */
 $startButton.addEventListener("click", startTheGame)
 $gamePage.addEventListener("click", checkDataBox)
 $setTime.addEventListener('input', setGameTime)
-
-isGameStarted = false
-score = 0;
 
 /* Main function */
 
@@ -85,7 +89,6 @@ function setGameScore() {
 }
 
 /* Time */ 
-
 
 function endGame() {
 
