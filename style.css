@@ -11,10 +11,9 @@
 
 /* styles for body */
 body {
-    margin: 0px;
+    margin: 70px;
     padding: 0px;
     font-family: Anton-Regular;
-    font-size: 16px;
     background-image: url(images/font1.webp);
     background-repeat: no-repeat;
     background-size: cover;
@@ -42,8 +41,8 @@ color: rgb(255, 255, 255);
 
 .game-page {
     display: inline-block;
-    width: 2500px;
-    height: 700px;
+    min-width: 900px;
+    min-height: 700px;
     margin: 50px;
     margin-top: 90px;
     position: relative;
@@ -105,7 +104,7 @@ color: rgb(255, 255, 255);
 
 .time-page, .result-page {
     display: inline-block;
-    width: 900px;
+    min-width: 350px;
     height: 500px;
     margin: 50px;
     padding: 20px;
@@ -172,3 +171,76 @@ color: rgb(255, 255, 255);
 .hide {
     visibility: hidden;
 }
+
+
+/* ......................................
+
+MEDIA 
+
+........................................*/
+
+@media (max-width: 1600px) { 
+
+   .all-the-page {
+    display: inline-block;
+}
+
+    .game-name {
+        top: -50px;
+        left: 400px;
+    
+    }
+
+    /* COUNTER */
+
+    .time-page {
+        display: block
+    }
+    
+    .time-score {
+        left: 150px;
+        top: -250px;
+        font-size: 100px;
+    }
+
+    .time-counter-name {
+        right: 275px;
+        font-size: 50px;
+    }
+
+    .set-time-name {
+        right: 225px;
+       font-size: 35px;
+       top: 390px;
+       width: 400px;
+    }
+
+    .set-time-input{
+        width: 300px;
+        height: 60px;
+        top: -5px;
+        font-size: 60px;
+    }
+
+
+
+    /* RESULT */
+    .result-page {
+        display: block;
+    }
+
+    .result-name {
+        right: 325px;
+        font-size: 50px;
+    }
+
+    .result-counter-result {
+        top: 170px;
+        left: 440px;
+        font-size: 140px;
+        
+    }
+
+    
+
+} 

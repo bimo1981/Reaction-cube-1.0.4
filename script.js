@@ -107,7 +107,7 @@ function endGame() {
 function setGameTime() {
     var setTime = parseInt($setTime.value)
     $timeScore.textContent = setTime.toFixed(1)
-    if (setTime.toFixed(1) < 0 || setTime.toFixed(1) > 15) {
+    if (setTime.toFixed(1) < 0 || setTime.toFixed(1) > 15 || setTime == "") {
         $startButton.setAttribute("disabled", "true")
         throw new error("Введенное вами число меньше 0 или больше 15")
     } else {
