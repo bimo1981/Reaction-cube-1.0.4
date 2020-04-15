@@ -11,19 +11,26 @@
 
 /* styles for body */
 body {
+    margin: 0px;
+    padding: 0px;
     font-family: Anton-Regular;
     font-size: 16px;
+    background-image: url(images/font1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+ 
 }
 
-/* main box */
-.box {
+/* all-the-page */
+.all-the-page {
     display: flex;
-    background-color: green;
     justify-content: center;
     position: relative;
 }
 
-.name {
+/* game-name */
+
+.game-name {
 position: absolute;
 margin-top: 20px;
 font-size: 30px;
@@ -34,6 +41,8 @@ color: rgb(255, 255, 255);
 
 }
 
+/* major game-page */
+
 .game-page {
     display: inline-block;
     width: 2500px;
@@ -42,25 +51,70 @@ color: rgb(255, 255, 255);
     margin-top: 90px;
     position: relative;
 
-
+    overflow: hidden;
     background: linear-gradient(to top, rgb(255, 187, 0), rgb(253, 137, 83));
-    border: 4px solid rgb(255, 255, 255)
-}
-
-.start-button {
-    position: absolute;
-    left: 355px;
-    top: 300px;
-    padding: 10px;
-
-    background: linear-gradient(to top, rgb(255, 187, 0), rgb(253, 137, 83));
-    border: 1px solid rgb(255, 255, 255);
-    font-size: 30px;
-
+    border: 4px solid rgb(255, 255, 255);
     
 }
 
-/* Time game, result */
+/* START BUTTON */ 
+
+.start-button {
+    position: absolute;
+    left: 320px;
+    top: 300px;
+    padding: 25px;
+
+    cursor: pointer;
+    font-size: 30px;  
+    background: none;
+    border: none;
+    position: relative;
+
+    color: white;
+    
+}
+
+.start-button:before {
+   
+    content: "";
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+    border-top: solid 2px;    
+    border-bottom: solid 2px;
+    transition: 0.2s;
+    transform: scaleX(0);
+}
+
+.start-button:hover:before {
+    transform: scale(1);
+}
+
+.start-button::after {
+   
+    content: "";
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+    border-right: solid 2px;    
+    border-left: solid 2px;
+    transition: 0.2s;
+    transform: scaleY(0);
+}
+
+.start-button:hover:after {
+    transform: scale(1);
+}
+
+
+
+/* TIME GAME, RESULT */
+
 .time-page, .result-page {
     display: inline-block;
     width: 900px;
@@ -72,6 +126,7 @@ color: rgb(255, 255, 255);
     border: 4px solid rgb(255, 255, 255);
     font-size: 30px;
     position: relative;
+    overflow: hidden;
     
 }
 
@@ -91,6 +146,7 @@ color: rgb(255, 255, 255);
     text-transform: uppercase;
     letter-spacing: 5.5px;
 
+
     font-weight: 500;
     color: rgb(255, 255, 255);
     
@@ -102,6 +158,7 @@ color: rgb(255, 255, 255);
     position: absolute;
     bottom: 35px;
     letter-spacing: 1.5px;
+
 
     color: rgb(255, 255, 255);
 
@@ -118,4 +175,30 @@ color: rgb(255, 255, 255);
 }
 
 
+.result-counter-result {
+    position: absolute;
 
+    font-size: 70px;
+    bottom: 250px;
+    left: 165px;
+
+    color: white;
+}
+
+.time-score {
+    position: absolute;
+    
+
+    
+    font-size: 70px;
+    bottom: 250px;
+    left: 125px;
+
+    color: white;
+}
+
+/* hide, for add in class */
+
+.hide {
+    visibility: hidden;
+}

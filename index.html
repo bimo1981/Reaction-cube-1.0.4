@@ -5,25 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
     <title>Reaction cube 2.0</title>
+    <script async src="script.js"></script>
 </head>
 <body>
     
-    <div class="box">
+    <div class="all-the-page">
 
-        <div class="name">Reaction cube 2.0</div>
+        <div class="game-name">Reaction cube 2.0</div>
 
             <div class="time-page">
                 <div class="time-counter-name">Time game:</div>
-                <div class="set-time-name">Set time:<input class="set-time-input" type="number" min="0" max="15"></div>
+                <div class="set-time-name">Set time: <span class="time-score" id="time-score">0.0</span><input class="set-time-input" id="set-time-input" type="number" min="5" max="15"></div>
             </div>
 
-            <div class="game-page">
-                <div><button class="start-button">Start the game</button></div>
+            <div class="game-page" id="game-page">
+                <div><button class="start-button" id="start-button">Start the game</button></div>
+                <div id="area-for-cube"></div>
             </div>
 
             <div class="result-page">
                 <div class="result-name">Result:</div>
-                <div class="result-counter"><span id="result">0</span></div>
+                <div class="result-counter"><span class="result-counter-result" id="result-counter-result">0</span></div>
             </div>
 
     </div>
