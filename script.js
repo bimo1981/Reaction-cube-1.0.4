@@ -1,35 +1,36 @@
+"use strict";
 /* initialization main */
 
-var $startButton = document.querySelector("#start-button")
-var $gamePage = document.querySelector("#game-page")
-var $result = document.querySelector("#result-counter-result")
-var $timeScore = document.querySelector("#time-score")
-var $areaForCube = document.querySelector("#area-for-cube")
-var $setTime = document.querySelector("#set-time-input")
+var $startButton = document.querySelector("#start-button");
+var $gamePage = document.querySelector("#game-page");
+var $result = document.querySelector("#result-counter-result");
+var $timeScore = document.querySelector("#time-score");
+var $areaForCube = document.querySelector("#area-for-cube");
+var $setTime = document.querySelector("#set-time-input");
 
 /* initialization other */
-isGameStarted = false
-score = 0;
+var isGameStarted = false;
+var score = 0;
 
 /* Add events */
-$startButton.addEventListener("click", startTheGame)
-$gamePage.addEventListener("click", checkDataBox)
-$setTime.addEventListener('input', setGameTime)
+$startButton.addEventListener("click", startTheGame);
+$gamePage.addEventListener("click", checkDataBox);
+$setTime.addEventListener('input', setGameTime);
 
 /* Main function */
 
 function startTheGame(){
 
-    score = 0
+    score = 0;
 
-    isGameStarted = true
-    $startButton.classList.add("hide")
+    isGameStarted = true;
+    $startButton.classList.add("hide");
 
     setGameTime()
 
-    $setTime.setAttribute("disabled", "true")
+    $setTime.setAttribute("disabled", "true");
     var interval = setInterval(function(){
-        var time = parseFloat($timeScore.textContent)
+        var time = parseFloat($timeScore.textContent);
     
 
         if ($timeScore.textContent <= 0) {
