@@ -26,7 +26,7 @@ function startTheGame(){
     isGameStarted = true;
     $startButton.classList.add("hide");
 
-    setGameTime()
+    setGameTime();
 
     $setTime.setAttribute("disabled", "true");
     var interval = setInterval(function(){
@@ -34,36 +34,36 @@ function startTheGame(){
     
 
         if ($timeScore.textContent <= 0) {
-            clearInterval(interval)
-            endGame()
+            clearInterval(interval);
+            endGame();
         } else { 
-        $timeScore.textContent = (time - 0.1).toFixed(1)
+        $timeScore.textContent = (time - 0.1).toFixed(1);
         }
-    }, 100)
+    }, 100);
 
-    generationCube()
+    generationCube();
 }
 
 /* Generation cubes */
 
 function generationCube() {
 
-    $areaForCube.innerHTML = ""
-    gamePageSize = $gamePage.getBoundingClientRect()
-    var gamePageSizeLeft = gamePageSize.width - random(60, 150)
-    var gamePageSizeTop = gamePageSize.height - random(60, 150)
+    $areaForCube.innerHTML = "";
+    var gamePageSize = $gamePage.getBoundingClientRect();
+    var gamePageSizeLeft = gamePageSize.width - random(60, 150);
+    var gamePageSizeTop = gamePageSize.height - random(60, 150);
 
-    var box = document.createElement("div")
+    var box = document.createElement("div");
 
-    box.style.width = random(80, 150) + "px"
-    box.style.height = random(80, 150) + "px"
-    box.style.backgroundColor = "white"
-    box.style.position = "absolute"
-    box.style.left = random(0, gamePageSizeLeft) + "px"
-    box.style.top = random(0, gamePageSizeTop) + "px"
-    box.style.cursor = "pointer"
-    box.setAttribute("data-name", "box")
-    $areaForCube.insertAdjacentElement("afterbegin", box)
+    box.style.width = random(80, 150) + "px";
+    box.style.height = random(80, 150) + "px";
+    box.style.backgroundColor = "white";
+    box.style.position = "absolute";
+    box.style.left = random(0, gamePageSizeLeft) + "px";
+    box.style.top = random(0, gamePageSizeTop) + "px";
+    box.style.cursor = "pointer";
+    box.setAttribute("data-name", "box");
+    $areaForCube.insertAdjacentElement("afterbegin", box);
 
 }
 
@@ -73,32 +73,32 @@ function checkDataBox (event) {
 
 
     if (event.target.dataset.name) {
-        setGameScore()
-        generationCube()
+        setGameScore();
+        generationCube();
     }
 }
 
 /* Math random */
 
 function random(min, max) {
-    return Math.floor(Math.random() * (max - min) + min)
+    return Math.floor(Math.random() * (max - min) + min);
 }
 
 function setGameScore() {
-    score++ 
-    $result.textContent = score
+    score++;
+    $result.textContent = score;
 }
 
 /* Time */ 
 
 function endGame() {
 
-    isGameStarted = false
+    isGameStarted = false;
     console.log("Конец игры");
-    isGameStarted = false
-    $startButton.classList.remove("hide")
-    $areaForCube.innerHTML = ""
-    $setTime.removeAttribute("disabled", "true")
+    isGameStarted = false;
+    $startButton.classList.remove("hide");
+    $areaForCube.innerHTML = "";
+    $setTime.removeAttribute("disabled", "true");
 
     
 }
@@ -106,19 +106,16 @@ function endGame() {
 /* Set game time */
 
 function setGameTime() {
-    var setTime = parseInt($setTime.value)
-    $timeScore.textContent = setTime.toFixed(1)
+    var setTime = parseInt($setTime.value);
+    $timeScore.textContent = setTime.toFixed(1);
     if (setTime.toFixed(1) < 0 || setTime.toFixed(1) > 15 || setTime == "") {
-        $startButton.setAttribute("disabled", "true")
-        throw new error("Введенное вами число меньше 0 или больше 15")
+        $startButton.setAttribute("disabled", "true");
+        throw new Error("Введенное вами число меньше 0 или больше 15");
     } else {
-        $startButton.removeAttribute("disabled", "true")
+        $startButton.removeAttribute("disabled", "true");
     }
 }
 
 
 /* Make mistake */
 
-function error (message) {
-    alert(message)
-}
