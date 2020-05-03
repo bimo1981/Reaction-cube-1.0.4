@@ -1,6 +1,6 @@
 /* connection fonts */
 @font-face {
-    font-family: Anton-Regular;
+    font-family: PermanentMarker-Regular;
     src:url(font/Anton-Regular.ttf);
 }
 
@@ -13,8 +13,8 @@
 body {
     margin: 70px;
     padding: 0px;
-    font-family: Anton-Regular;
-    background-image: url(images/font1.webp);
+    font-family: GloriaHallelujah-Regular;
+    background-image: url(images/8q1HFeu.gif);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -30,11 +30,11 @@ body {
 
 .game-name {
 position: absolute;
-margin-top: 20px;
-font-size: 30px;
+margin-top: 10px;
+font-size: 50px;
 font-weight: 700;
 letter-spacing: 1.5px;
-color: rgb(255, 255, 255);
+color: rgb(240, 163, 108);
 }
 
 /* Major game-page */
@@ -47,8 +47,8 @@ color: rgb(255, 255, 255);
     margin-top: 90px;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(to top, rgb(255, 187, 0), rgb(253, 137, 83));
-    border: 4px solid rgb(255, 255, 255);
+    background: linear-gradient(to top, rgb(14, 1, 0),rgba(0, 0, 0, 0.19));
+
 }
 
 /* Start button */ 
@@ -63,7 +63,7 @@ color: rgb(255, 255, 255);
     background: none;
     border: none;
     position: relative;
-    color: white;
+    color: rgb(240, 163, 108);
 }
 
 .start-button:before {
@@ -108,8 +108,8 @@ color: rgb(255, 255, 255);
     height: 500px;
     margin: 50px;
     padding: 20px;
-    background: linear-gradient(to top, rgb(255, 187, 0), rgb(253, 137, 83));
-    border: 4px solid rgb(255, 255, 255);
+    background: linear-gradient(to top, rgb(14, 1, 0),rgba(0, 0, 0, 0.19));
+
     font-size: 30px;
     position: relative;
     overflow: hidden;
@@ -117,20 +117,20 @@ color: rgb(255, 255, 255);
 
 .time-counter-name {
     position: absolute;
-    right: 80px;
+    right: 50px;
     text-transform: uppercase;
     letter-spacing: 5.5px;
     font-weight: 500;
-    color: rgb(255, 255, 255);
+    color: rgb(240, 163, 108);
 }
 
 .result-name {
     position: absolute;
-    right: 105px;
+    right: 90px;
     text-transform: uppercase;
     letter-spacing: 5.5px;
     font-weight: 500;
-    color: rgb(255, 255, 255);
+    color: rgb(240, 163, 108);
 }
 
 .set-time-name {
@@ -139,7 +139,7 @@ color: rgb(255, 255, 255);
     position: absolute;
     bottom: 35px;
     letter-spacing: 1.5px;
-    color: rgb(255, 255, 255);
+    color: rgb(240, 163, 108);
 }
 
 .set-time-input {
@@ -149,22 +149,24 @@ color: rgb(255, 255, 255);
     bottom: -8px;
     left: 150px;
     font-size: 20px;
+    background: linear-gradient(to top, rgb(14, 1, 0),rgba(0, 0, 0, 0.19));
+    color: rgb(240, 163, 108);
 }
 
 .result-counter-result {
     position: absolute;
     font-size: 70px;
-    bottom: 250px;
-    left: 165px;
-    color: white;
+    bottom: 190px;
+    left: 145px;
+    color: rgb(240, 163, 108);
 }
 
 .time-score {
     position: absolute;
     font-size: 70px;
-    bottom: 250px;
-    left: 125px;
-    color: white;
+    bottom: 190px;
+    left: 110px;
+    color: rgb(240, 163, 108);
 }
 
 /* hide, for add in class */

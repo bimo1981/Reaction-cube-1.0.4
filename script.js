@@ -1,16 +1,18 @@
-"use strict";
+(function () {
+'use strict';}());
+
 /* initialization main */
 
-var $startButton = document.querySelector("#start-button");
-var $gamePage = document.querySelector("#game-page");
-var $result = document.querySelector("#result-counter-result");
-var $timeScore = document.querySelector("#time-score");
-var $areaForCube = document.querySelector("#area-for-cube");
-var $setTime = document.querySelector("#set-time-input");
+let $startButton = document.querySelector("#start-button"),
+    $gamePage = document.querySelector("#game-page"),
+    $result = document.querySelector("#result-counter-result"),
+    $timeScore = document.querySelector("#time-score"),
+    $areaForCube = document.querySelector("#area-for-cube"),
+    $setTime = document.querySelector("#set-time-input");
 
 /* initialization other */
-var isGameStarted = false;
-var score = 0;
+let isGameStarted = false,
+    score = 0;
 
 /* Add events */
 $startButton.addEventListener("click", startTheGame);
@@ -19,7 +21,7 @@ $setTime.addEventListener('input', setGameTime);
 
 /* Main function */
 
-function startTheGame(){
+function startTheGame() {
 
     score = 0;
 
@@ -29,18 +31,17 @@ function startTheGame(){
     setGameTime();
 
     $setTime.setAttribute("disabled", "true");
-    var interval = setInterval(function(){
+    var interval = setInterval(function () {
         var time = parseFloat($timeScore.textContent);
-    
+
 
         if ($timeScore.textContent <= 0) {
             clearInterval(interval);
             endGame();
-        } else { 
-        $timeScore.textContent = (time - 0.1).toFixed(1);
+        } else {
+            $timeScore.textContent = (time - 0.1).toFixed(1);
         }
     }, 100);
-
     generationCube();
 }
 
@@ -56,22 +57,21 @@ function generationCube() {
     var box = document.createElement("div");
 
     box.style.width = random(80, 150) + "px";
-    box.style.height = random(80, 150) + "px";
-    box.style.backgroundColor = "white";
+    box.style.height = 100 + "%";
+    box.style.backgroundImage = "url(images/giphy.gif)";
+    box.style.backgroundSize = 50 + "%";
+    box.style.backgroundRepeat = "no-repeat";
     box.style.position = "absolute";
     box.style.left = random(0, gamePageSizeLeft) + "px";
     box.style.top = random(0, gamePageSizeTop) + "px";
     box.style.cursor = "pointer";
     box.setAttribute("data-name", "box");
     $areaForCube.insertAdjacentElement("afterbegin", box);
-
 }
 
 /* Check element */
 
-function checkDataBox (event) {
-
-
+function checkDataBox(event) {
     if (event.target.dataset.name) {
         setGameScore();
         generationCube();
@@ -83,24 +83,20 @@ function checkDataBox (event) {
 function random(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
-
 function setGameScore() {
     score++;
     $result.textContent = score;
 }
 
-/* Time */ 
+/* Time */
 
 function endGame() {
-
     isGameStarted = false;
     console.log("Конец игры");
     isGameStarted = false;
     $startButton.classList.remove("hide");
     $areaForCube.innerHTML = "";
     $setTime.removeAttribute("disabled", "true");
-
-    
 }
 
 /* Set game time */
@@ -118,4 +114,3 @@ function setGameTime() {
 
 
 /* Make mistake */
-
