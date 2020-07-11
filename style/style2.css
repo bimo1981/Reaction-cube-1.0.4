@@ -104,12 +104,12 @@ background: #FFFFFF;
     position: absolute;
     width: 55px;
     height: 54px;
-    left: 63px;
-    top: 6px;
+    left: 50px;
+    top: 3px;
 
     font-family: "Patric";
 
-    font-size: 56px;
+    font-size: 76px;
     line-height: 76px;
 
     color: #4D5C5E;
@@ -117,13 +117,16 @@ background: #FFFFFF;
 
 .time input {
     position: absolute;
-    width: 100px;
+    width: 150px;
     font-family: "Patric";
     color: #4D5C5E;
     background-color: #F4F4F4;
     border: none;
     margin: 0px;
     padding: 0px;
+    height: 53px;
+    top: 8px;
+    left: -30px;
 }
 
 .hidden {
