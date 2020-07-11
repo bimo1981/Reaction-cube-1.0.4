@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Patric";
+    src: url("./font/Patric.ttf");
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.page {
+position: relative;
+width: 1920px;
+height: 1080px;
+
+background: #FFFFFF;
+}
+
+
+.game-page {
+    position: absolute;
+    width: 1496px;
+    height: 803px;
+    left: 335px;
+    top: 60px;
+    
+    background: #F4F4F4;
+    border: 1px solid #000000;
+}
+
+.name-for-start-button{
+    position: absolute;
+    width: 364px;
+    height: 54px;
+    left: 579px;
+    top: 335px;
+    
+    font-family: "Patric";
+    font-size: 52px;
+    line-height: 70px;
+    
+    color: #4D5C5E;
+}
+
+.start-cube {
+    position: absolute;
+    left: 705px;
+    top: 433px;
+    width: 91px;
+    height: 82px;
+
+    cursor: pointer;
+    background-color: #4D5C5E;
+    border: 2px solid #000000;
+}
+
+.time-box, .points-box, .result-box {
+    position: absolute;
+    width: 181px;
+    height: 87px;
+    left: 57px;
+    top: 296px;
+
+    background-color: #F4F4F4;
+    border: 1px solid #000000;
+}
+
+.points-box{
+    top: 500px;
+}
+
+.result-box {
+    top: 704px;
+}
+
+.time-box-name, .points-box-name, .result-box-name {
+    position: absolute;
+    width: 111px;
+    height: 54px;
+    left: 85px;
+    top: 222px;
+    
+    font-family: "Patric";
+    font-size: 56px;
+    line-height: 76px;
+    
+    color: #4D5C5E;
+}
+
+.points-box-name {
+    top: 428px;
+}
+
+.result-box-name {
+    top: 632px;
+}
+
+
+.time, .points, .results {
+    position: absolute;
+    width: 55px;
+    height: 54px;
+    left: 63px;
+    top: 6px;
+
+    font-family: "Patric";
+
+    font-size: 56px;
+    line-height: 76px;
+
+    color: #4D5C5E;
+}
+
+.time input {
+    position: absolute;
+    width: 100px;
+    font-family: "Patric";
+    color: #4D5C5E;
+    background-color: #F4F4F4;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.hidden {
+    visibility: hidden;
+    
+}
