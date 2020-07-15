@@ -74,7 +74,7 @@ body {
     position: absolute;
     width: 369px;
     height: 54px;
-    left: 840px;
+    left: 880px;
     top: 565px;
 
     font-family: "Patric";
@@ -95,4 +95,26 @@ body {
     background: #4D5C5E;
     border: 2px solid #000000;
     z-index: 2;
+}
+
+.interface-block{
+    position: absolute;
+    width: 209px;
+    height: 1310.37px;
+    left: 883px;
+    top: -300.53px;
+
+    background: #164F53;
+    transform: rotate(114.16deg);
+}
+
+.interface-block1{
+    position: absolute;
+    width: 209px;
+    height: 1310.37px;
+    left: 883px;
+    top: -50.53px;
+    
+    background: #C4C4C4;
+    transform: rotate(114.16deg);
 }
