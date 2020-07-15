@@ -14,8 +14,9 @@ const start = document.querySelector('.start-cube'),
 let incrementPoints = 0,
     points = document.querySelector('.points'), 
     time = document.querySelector('#time'),
-    results = document.querySelector('.results');
-    
+    results = document.querySelector('.results'),
+    colors = ['#78281F', '#FFF333', '#00E4FF'];
+
 //* start game function
 start.addEventListener("click", function(){
 
@@ -68,19 +69,31 @@ function generationCube() {
 //* deleted old cube to generate a new cube 
     gamePageForCube.innerHTML = '';
     
+
 //* get size 
-    let width = gamePage.clientWidth - 40,
-        height = gamePage.clientHeight - 40;
+    let width = gamePage.clientWidth - 145,
+        height = gamePage.clientHeight - 145;
+
 
 //* create a box
     let cube = document.createElement('div');
     cube.style.position = 'absolute';
-    cube.style.width = random(90, 170) + 'px';
-    cube.style.height = random(60, 150) + 'px';
+    cube.style.width = random(110, 170) + 'px';
+    cube.style.height = random(90, 150) + 'px';
     cube.style.left = random(0, width) + 'px';
     cube.style.top = random(0, height) + 'px';
     cube.style.cursor = 'pointer';
-    cube.style.backgroundColor = '#4D5C5E';
+
+    if(parseInt(points.textContent) >= 5 && parseInt(points.textContent) <= 10) {
+        cube.style.backgroundColor = colors[0];
+    } else if (parseInt(points.textContent) >= 11 && parseInt(points.textContent) <= 20 ) {
+        cube.style.backgroundColor = colors[1];
+    } else if (parseInt(points.textContent) >= 21 && parseInt(points.textContent) <= 30) {
+        cube.style.backgroundColor = colors[2];
+    } else {
+        cube.style.backgroundColor = '#4D5C5E';
+    }
+
     cube.style.border = 2 + 'px' + ' solid' + ' #000000';
     cube.setAttribute('data-name', 'box');
 
@@ -89,7 +102,9 @@ function generationCube() {
     gamePageForCube.appendChild(cube);
 
 //* add the class 'hidden'
+    
     gamePage.style.overflow = 'hidden';
+
 
 }
 
