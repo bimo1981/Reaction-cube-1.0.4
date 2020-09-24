@@ -71,8 +71,8 @@ function generationCube() {
     
 
 //* get size 
-    let width = gamePage.clientWidth - 145,
-        height = gamePage.clientHeight - 145;
+    let width = gamePage.clientWidth,
+        height = gamePage.clientHeight;
 
 
 //* create a box
