@@ -109,9 +109,9 @@ function generationCube() {
 }
 
 //* add event to check dataset
-gamePage.addEventListener('click', function(event){
-
-    //* add point if you hit the cube
+      gamePage.addEventListener('click', function(event){
+            
+//* add point if you hit the cube
     if(event.target.dataset.name){
         points.textContent = ++incrementPoints;
         generationCube();
