@@ -47,6 +47,18 @@ background: #FFFFFF;
     color: #4D5C5E;
 }
 
+.name-for-start-button{
+    position: absolute;
+    width: 24px;
+    height: 14px;
+    left: 620px;
+    top: 335px;
+    
+ 
+    
+    color: #4D5C5E;
+}
+
 .start-cube {
     position: absolute;
     left: 705px;
